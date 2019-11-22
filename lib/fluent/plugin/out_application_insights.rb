@@ -74,7 +74,7 @@ module Fluent::Plugin
     def start
       super
 
-      sender = Channel::AsynchronousSender.new if @service_endpoint_uri.nil? else Channel::AsynchronousSender.new @service_endpoint_uri
+      sender = @service_endpoint_uri.nil? ? Channel::AsynchronousSender.new : Channel::AsynchronousSender.new(@service_endpoint_uri)
       queue = Channel::AsynchronousQueue.new sender
       channel = Channel::TelemetryChannel.new nil, queue
       @tc = TelemetryClient.new @instrumentation_key, channel
