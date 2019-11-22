@@ -2,15 +2,15 @@ lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
-  spec.name    = "fluent-plugin-application-insights"
-  spec.version = "0.2.4"
-  spec.authors = ["Microsoft Corporation"]
-  spec.email   = ["azure-tools@microsoft.com"]
+  spec.name    = "fluent-plugin-application-insights-freiheit"
+  spec.version = "0.2.5"
+  spec.authors = ["freiheit.com"]
+  spec.email   = ["xyz@freiheit.com"]
 
-  spec.summary       = "This is the fluentd output plugin for Azure Application Insights."
+  spec.summary       = "This is a fork of the fluentd output plugin for Azure Application Insights."
   spec.description   = "Fluentd output plugin for Azure Application Insights."
 
-  spec.homepage      = "https://github.com/Microsoft/fluent-plugin-application-insights"
+  spec.homepage      = "https://github.com/dennis-tra/fluent-plugin-application-insights"
   spec.license       = "MIT"
 
   test_files, files  = `git ls-files -z`.split("\x0").partition do |f|
